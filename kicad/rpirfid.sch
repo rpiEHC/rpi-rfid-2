@@ -1,0 +1,326 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:rpirfid-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA32U4-A U?
+U 1 1 56218245
+P 3850 3550
+F 0 "U?" H 2900 5250 40  0000 C CNN
+F 1 "ATMEGA32U4-A" H 4550 2050 40  0000 C CNN
+F 2 "TQFP44" H 3850 3550 35  0000 C CIN
+F 3 "" H 4950 4650 60  0000 C CNN
+	1    3850 3550
+	1    0    0    -1  
+$EndComp
+Text Label 4150 1350 0    60   ~ 0
+VCC
+Wire Wire Line
+	3650 1350 3750 1350
+Wire Wire Line
+	3750 1350 4000 1350
+Wire Wire Line
+	4000 1350 4100 1350
+Wire Wire Line
+	4100 1350 4150 1350
+Wire Wire Line
+	3750 1350 3750 1750
+Wire Wire Line
+	3650 1750 3650 1350
+Connection ~ 3750 1350
+Wire Wire Line
+	4000 1750 4000 1350
+Connection ~ 4000 1350
+Wire Wire Line
+	4100 1750 4100 1350
+Connection ~ 4100 1350
+$Comp
+L CONN_01X02 P?
+U 1 1 56280043
+P 2950 1050
+F 0 "P?" H 2950 1200 50  0000 C CNN
+F 1 "POWER" V 3050 1050 50  0000 C CNN
+F 2 "" H 2950 1050 60  0000 C CNN
+F 3 "" H 2950 1050 60  0000 C CNN
+	1    2950 1050
+	1    0    0    -1  
+$EndComp
+Text Label 850  900  2    60   ~ 0
+VCC
+Text Label 1650 900  0    60   ~ 0
+EXT_VCC
+Wire Wire Line
+	850  900  1250 900 
+Wire Wire Line
+	1250 900  1650 900 
+$Comp
+L C C?
+U 1 1 56280307
+P 1250 1050
+F 0 "C?" H 1275 1150 50  0000 L CNN
+F 1 "1uF" H 1275 950 50  0000 L CNN
+F 2 "" H 1288 900 30  0000 C CNN
+F 3 "" H 1250 1050 60  0000 C CNN
+	1    1250 1050
+	1    0    0    -1  
+$EndComp
+Connection ~ 1250 900 
+Text Label 1250 1250 3    60   ~ 0
+GND
+Wire Wire Line
+	1250 1200 1250 1250
+Text Label 2750 1000 2    60   ~ 0
+EXT_VCC
+Text Label 2750 1100 2    60   ~ 0
+GND
+$Comp
+L R R?
+U 1 1 56280861
+P 2400 1850
+F 0 "R?" V 2480 1850 50  0000 C CNN
+F 1 "10k" V 2400 1850 50  0000 C CNN
+F 2 "" V 2330 1850 30  0000 C CNN
+F 3 "" H 2400 1850 30  0000 C CNN
+	1    2400 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2100 2000 2150 2000
+Wire Wire Line
+	2150 2000 2400 2000
+Wire Wire Line
+	2400 2000 2700 2000
+$Comp
+L SW_PUSH SW?
+U 1 1 562809C3
+P 1800 2000
+F 0 "SW?" H 1950 2110 50  0000 C CNN
+F 1 "SW_PUSH" H 1800 1920 50  0000 C CNN
+F 2 "" H 1800 2000 60  0000 C CNN
+F 3 "" H 1800 2000 60  0000 C CNN
+	1    1800 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 2400 2000
+Text Label 1500 2000 2    60   ~ 0
+GND
+Text Label 2400 1700 1    60   ~ 0
+VCC
+Text Label 3250 5350 2    60   ~ 0
+GND
+Wire Wire Line
+	3250 5350 3450 5350
+Wire Wire Line
+	3450 5350 3700 5350
+Wire Wire Line
+	3700 5350 3800 5350
+Wire Wire Line
+	3800 5350 3900 5350
+Wire Wire Line
+	3900 5350 4000 5350
+Wire Wire Line
+	3450 5350 3450 5150
+Wire Wire Line
+	3700 5350 3700 5150
+Connection ~ 3450 5350
+Wire Wire Line
+	3800 5350 3800 5150
+Connection ~ 3700 5350
+Wire Wire Line
+	3900 5350 3900 5150
+Connection ~ 3800 5350
+Wire Wire Line
+	4000 5350 4000 5150
+Connection ~ 3900 5350
+$Comp
+L CRYSTAL_SMD X?
+U 1 1 56282C06
+P 2200 2500
+F 0 "X?" H 2200 2590 50  0000 C CNN
+F 1 "CRYSTAL_SMD" V 2350 1950 50  0000 L CNN
+F 2 "" H 2200 2500 60  0000 C CNN
+F 3 "" H 2200 2500 60  0000 C CNN
+	1    2200 2500
+	0    1    1    0   
+$EndComp
+Text Label 1800 2500 2    60   ~ 0
+GND
+Wire Wire Line
+	1800 2500 2100 2500
+Wire Wire Line
+	2200 2300 2700 2300
+Wire Wire Line
+	2700 2300 2700 2400
+Wire Wire Line
+	2200 2700 2700 2700
+Wire Wire Line
+	2700 2700 2700 2600
+$Comp
+L C C?
+U 1 1 56283188
+P 2400 4400
+F 0 "C?" H 2425 4500 50  0000 L CNN
+F 1 "1uF" H 2425 4300 50  0000 L CNN
+F 2 "" H 2438 4250 30  0000 C CNN
+F 3 "" H 2400 4400 60  0000 C CNN
+	1    2400 4400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2550 4400 2700 4400
+Text Label 2250 4400 2    60   ~ 0
+GND
+$Comp
+L USB_A P?
+U 1 1 56283D84
+P 1000 3250
+F 0 "P?" H 1200 3050 50  0000 C CNN
+F 1 "USB_A" H 950 3450 50  0000 C CNN
+F 2 "" V 950 3150 60  0000 C CNN
+F 3 "" V 950 3150 60  0000 C CNN
+	1    1000 3250
+	0    -1   -1   0   
+$EndComp
+Text Label 1550 3150 0    60   ~ 0
+GND
+Wire Wire Line
+	1550 3150 1300 3150
+Text Label 3400 1750 2    60   ~ 0
+USB_VBUS
+Text Label 1300 3450 0    60   ~ 0
+USB_VBUS
+$Comp
+L C C?
+U 1 1 56284B4E
+P 2350 3750
+F 0 "C?" H 2375 3850 50  0000 L CNN
+F 1 "1uF" H 2375 3650 50  0000 L CNN
+F 2 "" H 2388 3600 30  0000 C CNN
+F 3 "" H 2350 3750 60  0000 C CNN
+	1    2350 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3600 2700 3600
+Text Label 2350 4000 0    60   ~ 0
+GND
+$Comp
+L R R?
+U 1 1 56284D8C
+P 1950 3250
+F 0 "R?" V 2030 3250 50  0000 C CNN
+F 1 "22" V 1950 3250 50  0000 C CNN
+F 2 "" V 1880 3250 30  0000 C CNN
+F 3 "" H 1950 3250 30  0000 C CNN
+	1    1950 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 56284DD7
+P 2250 3450
+F 0 "R?" V 2330 3450 50  0000 C CNN
+F 1 "22" V 2250 3450 50  0000 C CNN
+F 2 "" V 2180 3450 30  0000 C CNN
+F 3 "" H 2250 3450 30  0000 C CNN
+	1    2250 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 3250 1800 3250
+Wire Wire Line
+	2100 3250 2450 3250
+Wire Wire Line
+	2450 3250 2450 3350
+Wire Wire Line
+	2450 3350 2700 3350
+Wire Wire Line
+	1300 3350 1850 3350
+Wire Wire Line
+	1850 3350 1850 3450
+Wire Wire Line
+	1850 3450 2100 3450
+Wire Wire Line
+	2400 3450 2700 3450
+$Comp
+L CONN_02X03 P?
+U 1 1 562863E3
+P 5050 950
+F 0 "P?" H 5050 1150 50  0000 C CNN
+F 1 "AVR_PRG_SPI" H 5050 750 50  0000 C CNN
+F 2 "" H 5050 -250 60  0000 C CNN
+F 3 "" H 5050 -250 60  0000 C CNN
+	1    5050 950 
+	1    0    0    -1  
+$EndComp
+Text Label 4800 850  2    60   ~ 0
+AVR_MISO
+Text Label 4800 950  2    60   ~ 0
+AVR_SCK
+Text Label 4800 1050 2    60   ~ 0
+AVR_RESET
+Text Label 5300 850  0    60   ~ 0
+VCC
+Text Label 5300 950  0    60   ~ 0
+AVG_MOSI
+Text Label 5300 1050 0    60   ~ 0
+GND
+Text Label 4950 2300 0    60   ~ 0
+AVR_MISO
+Text Label 4950 2200 0    60   ~ 0
+AVR_MOSI
+Text Label 4950 2100 0    60   ~ 0
+AVR_SCLK
+Wire Wire Line
+	2350 4000 2350 3900
+Text Label 2200 2150 0    60   ~ 0
+AVR_RESET
+Wire Wire Line
+	2200 2150 2150 2150
+Wire Wire Line
+	2150 2150 2150 2000
+Connection ~ 2150 2000
+Text Label 2700 3200 2    60   ~ 0
+USB_VBUS
+$EndSCHEMATC
