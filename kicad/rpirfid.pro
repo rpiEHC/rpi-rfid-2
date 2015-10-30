@@ -1,4 +1,4 @@
-update=10/30/2015 7:03:54 PM
+update=10/30/2015 7:29:42 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=leglamp
+LibName31=ds1307
