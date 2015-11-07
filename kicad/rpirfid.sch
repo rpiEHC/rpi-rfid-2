@@ -28,7 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:rpirfid-cache
+LIBS:leglamp
+LIBS:ds1307
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -56,25 +57,6 @@ F 3 "" H 4950 4650 60  0000 C CNN
 $EndComp
 Text Label 4150 1350 0    60   ~ 0
 VCC
-Wire Wire Line
-	3650 1350 3750 1350
-Wire Wire Line
-	3750 1350 4000 1350
-Wire Wire Line
-	4000 1350 4100 1350
-Wire Wire Line
-	4100 1350 4150 1350
-Wire Wire Line
-	3750 1350 3750 1750
-Wire Wire Line
-	3650 1750 3650 1350
-Connection ~ 3750 1350
-Wire Wire Line
-	4000 1750 4000 1350
-Connection ~ 4000 1350
-Wire Wire Line
-	4100 1750 4100 1350
-Connection ~ 4100 1350
 $Comp
 L CONN_01X02 P?
 U 1 1 56280043
@@ -90,10 +72,6 @@ Text Label 850  900  2    60   ~ 0
 VCC
 Text Label 1650 900  0    60   ~ 0
 EXT_VCC
-Wire Wire Line
-	850  900  1250 900 
-Wire Wire Line
-	1250 900  1650 900 
 $Comp
 L C C?
 U 1 1 56280307
@@ -105,11 +83,8 @@ F 3 "" H 1250 1050 60  0000 C CNN
 	1    1250 1050
 	1    0    0    -1  
 $EndComp
-Connection ~ 1250 900 
 Text Label 1250 1250 3    60   ~ 0
 GND
-Wire Wire Line
-	1250 1200 1250 1250
 Text Label 2750 1000 2    60   ~ 0
 EXT_VCC
 Text Label 2750 1100 2    60   ~ 0
@@ -125,12 +100,6 @@ F 3 "" H 2400 1850 30  0000 C CNN
 	1    2400 1850
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2100 2000 2150 2000
-Wire Wire Line
-	2150 2000 2400 2000
-Wire Wire Line
-	2400 2000 2700 2000
 $Comp
 L SW_PUSH SW?
 U 1 1 562809C3
@@ -142,37 +111,12 @@ F 3 "" H 1800 2000 60  0000 C CNN
 	1    1800 2000
 	1    0    0    -1  
 $EndComp
-Connection ~ 2400 2000
 Text Label 1500 2000 2    60   ~ 0
 GND
 Text Label 2400 1700 1    60   ~ 0
 VCC
 Text Label 3250 5350 2    60   ~ 0
 GND
-Wire Wire Line
-	3250 5350 3450 5350
-Wire Wire Line
-	3450 5350 3700 5350
-Wire Wire Line
-	3700 5350 3800 5350
-Wire Wire Line
-	3800 5350 3900 5350
-Wire Wire Line
-	3900 5350 4000 5350
-Wire Wire Line
-	3450 5350 3450 5150
-Wire Wire Line
-	3700 5350 3700 5150
-Connection ~ 3450 5350
-Wire Wire Line
-	3800 5350 3800 5150
-Connection ~ 3700 5350
-Wire Wire Line
-	3900 5350 3900 5150
-Connection ~ 3800 5350
-Wire Wire Line
-	4000 5350 4000 5150
-Connection ~ 3900 5350
 $Comp
 L CRYSTAL_SMD X?
 U 1 1 56282C06
@@ -186,16 +130,6 @@ F 3 "" H 2200 2500 60  0000 C CNN
 $EndComp
 Text Label 1800 2500 2    60   ~ 0
 GND
-Wire Wire Line
-	1800 2500 2100 2500
-Wire Wire Line
-	2200 2300 2700 2300
-Wire Wire Line
-	2700 2300 2700 2400
-Wire Wire Line
-	2200 2700 2700 2700
-Wire Wire Line
-	2700 2700 2700 2600
 $Comp
 L C C?
 U 1 1 56283188
@@ -207,8 +141,6 @@ F 3 "" H 2400 4400 60  0000 C CNN
 	1    2400 4400
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2550 4400 2700 4400
 Text Label 2250 4400 2    60   ~ 0
 GND
 $Comp
@@ -224,8 +156,6 @@ F 3 "" V 950 3150 60  0000 C CNN
 $EndComp
 Text Label 1550 3150 0    60   ~ 0
 GND
-Wire Wire Line
-	1550 3150 1300 3150
 Text Label 3400 1750 2    60   ~ 0
 USB_VBUS
 Text Label 1300 3450 0    60   ~ 0
@@ -241,8 +171,6 @@ F 3 "" H 2350 3750 60  0000 C CNN
 	1    2350 3750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2350 3600 2700 3600
 Text Label 2350 4000 0    60   ~ 0
 GND
 $Comp
@@ -267,22 +195,6 @@ F 3 "" H 2250 3450 30  0000 C CNN
 	1    2250 3450
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1300 3250 1800 3250
-Wire Wire Line
-	2100 3250 2450 3250
-Wire Wire Line
-	2450 3250 2450 3350
-Wire Wire Line
-	2450 3350 2700 3350
-Wire Wire Line
-	1300 3350 1850 3350
-Wire Wire Line
-	1850 3350 1850 3450
-Wire Wire Line
-	1850 3450 2100 3450
-Wire Wire Line
-	2400 3450 2700 3450
 $Comp
 L CONN_02X03 P?
 U 1 1 562863E3
@@ -312,15 +224,133 @@ Text Label 4950 2200 0    60   ~ 0
 AVR_MOSI
 Text Label 4950 2100 0    60   ~ 0
 AVR_SCLK
-Wire Wire Line
-	2350 4000 2350 3900
 Text Label 2200 2150 0    60   ~ 0
 AVR_RESET
+Text Label 2700 3200 2    60   ~ 0
+USB_VBUS
+$Comp
+L Crystal_Small Y?
+U 1 1 563DDB95
+P 6700 1250
+F 0 "Y?" H 6700 1350 50  0000 C CNN
+F 1 "Crystal_Small" H 6700 1150 50  0000 C CNN
+F 2 "" H 6700 1250 60  0000 C CNN
+F 3 "" H 6700 1250 60  0000 C CNN
+	1    6700 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L ds1307 U?
+U 1 1 563DECB3
+P 7600 1700
+F 0 "U?" H 7650 2350 60  0000 C CNN
+F 1 "ds1307" H 7600 1750 60  0000 C CNN
+F 2 "" H 8050 1800 60  0000 C CNN
+F 3 "" H 8050 1800 60  0000 C CNN
+	1    7600 1700
+	1    0    0    -1  
+$EndComp
+Text Label 8200 1500 0    60   ~ 0
+SDA
+Wire Wire Line
+	3650 1350 4150 1350
+Wire Wire Line
+	3750 1350 3750 1750
+Wire Wire Line
+	3650 1750 3650 1350
+Connection ~ 3750 1350
+Wire Wire Line
+	4000 1750 4000 1350
+Connection ~ 4000 1350
+Wire Wire Line
+	4100 1750 4100 1350
+Connection ~ 4100 1350
+Wire Wire Line
+	850  900  1650 900 
+Connection ~ 1250 900 
+Wire Wire Line
+	1250 1200 1250 1250
+Wire Wire Line
+	2100 2000 2700 2000
+Connection ~ 2400 2000
+Wire Wire Line
+	3250 5350 4000 5350
+Wire Wire Line
+	3450 5350 3450 5150
+Wire Wire Line
+	3700 5350 3700 5150
+Connection ~ 3450 5350
+Wire Wire Line
+	3800 5350 3800 5150
+Connection ~ 3700 5350
+Wire Wire Line
+	3900 5350 3900 5150
+Connection ~ 3800 5350
+Wire Wire Line
+	4000 5350 4000 5150
+Connection ~ 3900 5350
+Wire Wire Line
+	1800 2500 2100 2500
+Wire Wire Line
+	2200 2300 2700 2300
+Wire Wire Line
+	2700 2300 2700 2400
+Wire Wire Line
+	2200 2700 2700 2700
+Wire Wire Line
+	2700 2700 2700 2600
+Wire Wire Line
+	2550 4400 2700 4400
+Wire Wire Line
+	1550 3150 1300 3150
+Wire Wire Line
+	2350 3600 2700 3600
+Wire Wire Line
+	1300 3250 1800 3250
+Wire Wire Line
+	2100 3250 2450 3250
+Wire Wire Line
+	2450 3250 2450 3350
+Wire Wire Line
+	2450 3350 2700 3350
+Wire Wire Line
+	1300 3350 1850 3350
+Wire Wire Line
+	1850 3350 1850 3450
+Wire Wire Line
+	1850 3450 2100 3450
+Wire Wire Line
+	2400 3450 2700 3450
+Wire Wire Line
+	2350 4000 2350 3900
 Wire Wire Line
 	2200 2150 2150 2150
 Wire Wire Line
 	2150 2150 2150 2000
 Connection ~ 2150 2000
-Text Label 2700 3200 2    60   ~ 0
-USB_VBUS
+Wire Wire Line
+	6700 1150 7250 1150
+Wire Wire Line
+	7250 1150 7250 1200
+Wire Wire Line
+	7250 1300 6850 1300
+Wire Wire Line
+	6850 1300 6850 1350
+Wire Wire Line
+	6850 1350 6700 1350
+Wire Wire Line
+	8000 1200 8200 1200
+Wire Wire Line
+	7000 1500 7250 1500
+Wire Wire Line
+	8000 1500 8200 1500
+Wire Wire Line
+	8000 1400 8200 1400
+Text Label 8200 1400 0    60   ~ 0
+SCL
+Text Label 7000 1500 0    60   ~ 0
+GND
+Text Label 8200 1200 0    60   ~ 0
+VCC
+NoConn ~ 8000 1300
 $EndSCHEMATC
