@@ -30,6 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:leglamp
 LIBS:ds1307
+LIBS:rpirfid-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -229,11 +230,11 @@ AVR_RESET
 Text Label 2700 3200 2    60   ~ 0
 USB_VBUS
 $Comp
-L Crystal_Small Y?
+L Crystal_Small Crystal
 U 1 1 563DDB95
 P 6700 1250
-F 0 "Y?" H 6700 1350 50  0000 C CNN
-F 1 "Crystal_Small" H 6700 1150 50  0000 C CNN
+F 0 "Crystal" H 6700 1350 50  0000 C CNN
+F 1 "32.768kHz" H 6700 1150 50  0000 C CNN
 F 2 "" H 6700 1250 60  0000 C CNN
 F 3 "" H 6700 1250 60  0000 C CNN
 	1    6700 1250
