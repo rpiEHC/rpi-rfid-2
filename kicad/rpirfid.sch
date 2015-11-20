@@ -30,6 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:leglamp
 LIBS:ds1307
+LIBS:em4095
 LIBS:rpirfid-cache
 EELAYER 25 0
 EELAYER END
@@ -254,7 +255,13 @@ $EndComp
 Text Label 8200 1500 0    60   ~ 0
 SDA
 Wire Wire Line
-	3650 1350 4150 1350
+	3650 1350 3750 1350
+Wire Wire Line
+	3750 1350 4000 1350
+Wire Wire Line
+	4000 1350 4100 1350
+Wire Wire Line
+	4100 1350 4150 1350
 Wire Wire Line
 	3750 1350 3750 1750
 Wire Wire Line
@@ -267,15 +274,29 @@ Wire Wire Line
 	4100 1750 4100 1350
 Connection ~ 4100 1350
 Wire Wire Line
-	850  900  1650 900 
+	850  900  1250 900 
+Wire Wire Line
+	1250 900  1650 900 
 Connection ~ 1250 900 
 Wire Wire Line
 	1250 1200 1250 1250
 Wire Wire Line
-	2100 2000 2700 2000
+	2100 2000 2150 2000
+Wire Wire Line
+	2150 2000 2400 2000
+Wire Wire Line
+	2400 2000 2700 2000
 Connection ~ 2400 2000
 Wire Wire Line
-	3250 5350 4000 5350
+	3250 5350 3450 5350
+Wire Wire Line
+	3450 5350 3700 5350
+Wire Wire Line
+	3700 5350 3800 5350
+Wire Wire Line
+	3800 5350 3900 5350
+Wire Wire Line
+	3900 5350 4000 5350
 Wire Wire Line
 	3450 5350 3450 5150
 Wire Wire Line
@@ -354,4 +375,415 @@ GND
 Text Label 8200 1200 0    60   ~ 0
 VCC
 NoConn ~ 8000 1300
+$Comp
+L EM4095 U?
+U 1 1 564F54E3
+P 7600 3550
+F 0 "U?" H 7600 3150 60  0000 C CNN
+F 1 "EM4095" H 7600 4300 60  0000 C CNN
+F 2 "" H 7600 3550 60  0000 C CNN
+F 3 "" H 7600 3550 60  0000 C CNN
+	1    7600 3550
+	1    0    0    -1  
+$EndComp
+Text Notes 6750 950  0    60   ~ 0
+Real Time Clock\n
+Text Notes 4300 700  0    60   ~ 0
+AVR Programmer
+Text Notes 6700 2600 0    60   ~ 0
+Transceiver/Antenna Circuit
+Text Label 6850 3050 2    60   ~ 0
+VCC
+Text Label 6850 3150 2    60   ~ 0
+RFID_EN
+$Comp
+L C C?
+U 1 1 564F9879
+P 6200 3250
+F 0 "C?" V 6350 3250 50  0000 L CNN
+F 1 "10nF" V 6050 3200 50  0000 L CNN
+F 2 "" H 6238 3100 30  0000 C CNN
+F 3 "" H 6200 3250 60  0000 C CNN
+	1    6200 3250
+	0    -1   -1   0   
+$EndComp
+Text Label 6050 3250 2    60   ~ 0
+GND
+Wire Wire Line
+	6350 3250 6850 3250
+Text Label 6850 3350 2    60   ~ 0
+RFID_MOD
+Text Label 6850 3500 2    60   ~ 0
+CDV
+$Comp
+L C C?
+U 1 1 564FBCAD
+P 6050 3750
+F 0 "C?" H 6075 3850 50  0000 L CNN
+F 1 "100nF" H 6075 3650 50  0000 L CNN
+F 2 "" H 6088 3600 30  0000 C CNN
+F 3 "" H 6050 3750 60  0000 C CNN
+	1    6050 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3600 6850 3600
+Wire Wire Line
+	6050 3900 6050 3950
+Wire Wire Line
+	6050 3950 6450 3950
+Wire Wire Line
+	6450 3950 6450 3700
+Wire Wire Line
+	6450 3700 6850 3700
+Text Label 6850 3800 2    60   ~ 0
+GND
+Text Label 8350 3750 0    60   ~ 0
+GND
+Text Label 9250 3650 0    60   ~ 0
+GND
+$Comp
+L C C?
+U 1 1 56500F75
+P 9100 3650
+F 0 "C?" V 9150 3450 50  0000 L CNN
+F 1 "10nF" V 9050 3400 50  0000 L CNN
+F 2 "" H 9138 3500 30  0000 C CNN
+F 3 "" H 9100 3650 60  0000 C CNN
+	1    9100 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 3650 8950 3650
+Text Label 8350 3450 0    60   ~ 0
+RFID_DATA
+$Comp
+L C C?
+U 1 1 56501AF3
+P 9100 3350
+F 0 "C?" V 9150 3150 50  0000 L CNN
+F 1 "10nF" V 9050 3100 50  0000 L CNN
+F 2 "" H 9138 3200 30  0000 C CNN
+F 3 "" H 9100 3350 60  0000 C CNN
+	1    9100 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8350 3350 8950 3350
+Text Label 9250 3350 0    60   ~ 0
+GND
+$Comp
+L C C?
+U 1 1 5650359A
+P 9400 2850
+F 0 "C?" V 9350 2700 50  0000 L CNN
+F 1 "100nF" V 9450 2550 50  0000 L CNN
+F 2 "" H 9438 2700 30  0000 C CNN
+F 3 "" H 9400 2850 60  0000 C CNN
+	1    9400 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 565037B6
+P 9400 2600
+F 0 "C?" V 9350 2450 50  0000 L CNN
+F 1 "100nF" V 9450 2300 50  0000 L CNN
+F 2 "" H 9438 2450 30  0000 C CNN
+F 3 "" H 9400 2600 60  0000 C CNN
+	1    9400 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 5650380B
+P 9400 2350
+F 0 "C?" V 9350 2200 50  0000 L CNN
+F 1 "100nF" V 9450 2050 50  0000 L CNN
+F 2 "" H 9438 2200 30  0000 C CNN
+F 3 "" H 9400 2350 60  0000 C CNN
+	1    9400 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 56504115
+P 9400 2100
+F 0 "C?" V 9350 1950 50  0000 L CNN
+F 1 "1nF" V 9450 1900 50  0000 L CNN
+F 2 "" H 9438 1950 30  0000 C CNN
+F 3 "" H 9400 2100 60  0000 C CNN
+	1    9400 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 56504174
+P 10200 2100
+F 0 "C?" V 10150 1950 50  0000 L CNN
+F 1 "1nF" V 10250 1900 50  0000 L CNN
+F 2 "" H 10238 1950 30  0000 C CNN
+F 3 "" H 10200 2100 60  0000 C CNN
+	1    10200 2100
+	0    1    1    0   
+$EndComp
+Text Label 10350 2100 0    60   ~ 0
+GND
+Wire Wire Line
+	9550 2100 9900 2100
+Wire Wire Line
+	9900 2100 10050 2100
+Text Label 10200 2300 0    60   ~ 0
+CDV
+Wire Wire Line
+	10200 2300 9900 2300
+Wire Wire Line
+	9900 2300 9900 2100
+Connection ~ 9900 2100
+Wire Wire Line
+	9550 2350 9550 2600
+Wire Wire Line
+	9550 2600 9550 2850
+Wire Wire Line
+	9550 2850 9550 3250
+Connection ~ 9550 2600
+Wire Wire Line
+	9550 3250 8350 3250
+Connection ~ 9550 2850
+Wire Wire Line
+	9050 2850 9250 2850
+Wire Wire Line
+	9050 2600 9250 2600
+Connection ~ 9050 2850
+Wire Wire Line
+	9250 2350 9050 2350
+Connection ~ 9050 2600
+Wire Wire Line
+	8650 2100 9250 2100
+Connection ~ 9050 2350
+Text Label 8350 3050 0    60   ~ 0
+RFID_CLK
+Text Label 8350 2950 0    60   ~ 0
+VCC
+$Comp
+L R R?
+U 1 1 5650BD70
+P 8550 3150
+F 0 "R?" V 8630 3150 50  0000 C CNN
+F 1 "R" V 8550 3150 50  0000 C CNN
+F 2 "" V 8480 3150 30  0000 C CNN
+F 3 "" H 8550 3150 30  0000 C CNN
+	1    8550 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 3150 8350 3150
+Text Label 8700 3150 0    60   ~ 0
+ANT
+Text Label 8650 2100 2    60   ~ 0
+ANT
+Wire Wire Line
+	9050 2100 9050 2350
+Wire Wire Line
+	9050 2350 9050 2600
+Wire Wire Line
+	9050 2600 9050 2850
+Text Notes 650  2850 0    60   ~ 0
+USB INPUT
+$Comp
+L R R?
+U 1 1 56513118
+P 6650 4500
+F 0 "R?" V 6730 4500 50  0000 C CNN
+F 1 "470" V 6650 4500 50  0000 C CNN
+F 2 "" V 6580 4500 30  0000 C CNN
+F 3 "" H 6650 4500 30  0000 C CNN
+	1    6650 4500
+	0    1    1    0   
+$EndComp
+Text Notes 6350 4300 0    60   ~ 0
+POWER LED
+$Comp
+L LED D?
+U 1 1 5651428C
+P 7150 4500
+F 0 "D?" H 7150 4600 50  0000 C CNN
+F 1 "LED" H 7150 4400 50  0000 C CNN
+F 2 "" H 7150 4500 60  0000 C CNN
+F 3 "" H 7150 4500 60  0000 C CNN
+	1    7150 4500
+	-1   0    0    1   
+$EndComp
+Text Label 6500 4500 2    60   ~ 0
+VCC
+Wire Wire Line
+	6800 4500 6950 4500
+Text Label 7350 4500 0    60   ~ 0
+GND
+Text Label 4950 3400 0    60   ~ 0
+RFID_CLK
+Text Label 4950 3500 0    60   ~ 0
+RFID_DATA
+Text Label 4950 3600 0    60   ~ 0
+RFID_EN
+Text Label 4950 4800 0    60   ~ 0
+RFID_MOD
+Text Label 4950 3300 0    60   ~ 0
+SDA
+Text Label 4950 3200 0    60   ~ 0
+SCL
+Text Notes 7900 4300 0    60   ~ 0
+Response LED
+Text Label 8100 4500 2    60   ~ 0
+RES_LED
+$Comp
+L R R?
+U 1 1 5651F2CE
+P 8450 4500
+F 0 "R?" V 8530 4500 50  0000 C CNN
+F 1 "470" V 8450 4500 50  0000 C CNN
+F 2 "" V 8380 4500 30  0000 C CNN
+F 3 "" H 8450 4500 30  0000 C CNN
+	1    8450 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D?
+U 1 1 5651F5C9
+P 8950 4500
+F 0 "D?" H 8950 4600 50  0000 C CNN
+F 1 "LED" H 8950 4400 50  0000 C CNN
+F 2 "" H 8950 4500 60  0000 C CNN
+F 3 "" H 8950 4500 60  0000 C CNN
+	1    8950 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8100 4500 8300 4500
+Wire Wire Line
+	8600 4500 8750 4500
+Text Label 9150 4500 0    60   ~ 0
+GND
+Text Label 4950 2500 0    60   ~ 0
+RES_LED
+Text Label 4950 2000 0    60   ~ 0
+RXLED
+Text Label 4950 3700 0    60   ~ 0
+TXLED
+Text Notes 6350 4850 0    60   ~ 0
+TX & RX LED\n
+Text Label 6500 5000 2    60   ~ 0
+VCC
+$Comp
+L R R?
+U 1 1 565281FE
+P 6900 5250
+F 0 "R?" V 6980 5250 50  0000 C CNN
+F 1 "1k" V 6900 5250 50  0000 C CNN
+F 2 "" V 6830 5250 30  0000 C CNN
+F 3 "" H 6900 5250 30  0000 C CNN
+	1    6900 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5652880A
+P 7200 5250
+F 0 "R?" V 7280 5250 50  0000 C CNN
+F 1 "1k" V 7200 5250 50  0000 C CNN
+F 2 "" V 7130 5250 30  0000 C CNN
+F 3 "" H 7200 5250 30  0000 C CNN
+	1    7200 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 5100 6900 5000
+Wire Wire Line
+	6500 5000 6900 5000
+Wire Wire Line
+	6900 5000 7200 5000
+Wire Wire Line
+	7200 5000 7200 5100
+Connection ~ 6900 5000
+$Comp
+L LED D?
+U 1 1 5652896B
+P 6900 5600
+F 0 "D?" H 6900 5700 50  0000 C CNN
+F 1 "LED" H 6900 5500 50  0000 C CNN
+F 2 "" H 6900 5600 60  0000 C CNN
+F 3 "" H 6900 5600 60  0000 C CNN
+	1    6900 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D?
+U 1 1 56528A02
+P 7200 5600
+F 0 "D?" H 7200 5700 50  0000 C CNN
+F 1 "LED" H 7200 5500 50  0000 C CNN
+F 2 "" H 7200 5600 60  0000 C CNN
+F 3 "" H 7200 5600 60  0000 C CNN
+	1    7200 5600
+	0    -1   -1   0   
+$EndComp
+Text Label 6900 5800 3    60   ~ 0
+RXLED
+Text Label 7200 5800 3    60   ~ 0
+TXLED
+$Comp
+L LM7805 U?
+U 1 1 5652D2E3
+P 8500 5250
+F 0 "U?" H 8650 5054 60  0000 C CNN
+F 1 "LM7805" H 8500 5450 60  0000 C CNN
+F 2 "" H 8500 5250 60  0000 C CNN
+F 3 "" H 8500 5250 60  0000 C CNN
+	1    8500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 5652D37A
+P 9550 5250
+F 0 "P?" H 9550 5400 50  0000 C CNN
+F 1 "BATTERY INPUT" H 9400 5050 50  0000 C CNN
+F 2 "" H 9550 5250 60  0000 C CNN
+F 3 "" H 9550 5250 60  0000 C CNN
+	1    9550 5250
+	-1   0    0    1   
+$EndComp
+Text Label 9750 5200 0    60   ~ 0
+VBATT
+Text Label 9750 5300 0    60   ~ 0
+GND
+Text Notes 8100 4850 0    60   ~ 0
+BATTERY POWER
+Text Label 8500 5500 3    60   ~ 0
+GND
+Text Label 8100 5200 2    60   ~ 0
+VBATT
+Text Label 8900 5200 0    60   ~ 0
+EXT_VDD
+Text Notes 7950 5350 0    60   ~ 0
+5V REG\n
+$Comp
+L LD1117S33CTR U?
+U 1 1 56537878
+P 9700 5800
+F 0 "U?" H 9700 6050 40  0000 C CNN
+F 1 "LD1117S33CTR" H 9700 6000 40  0000 C CNN
+F 2 "SOT-223" H 9700 5900 40  0000 C CNN
+F 3 "" H 9700 5800 60  0000 C CNN
+	1    9700 5800
+	1    0    0    -1  
+$EndComp
+Text Label 9300 5750 2    60   ~ 0
+VBATT
+Text Label 9700 6050 3    60   ~ 0
+GND
+Text Label 10100 5750 0    60   ~ 0
+3.3V
+Text Notes 9100 5900 0    60   ~ 0
+3V REG
 $EndSCHEMATC
