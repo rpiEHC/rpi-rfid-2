@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ds1308)(type KiCad)(uri C:\Users\Courtney\Documents\GitHub\rpi-rfid-2\ds1308.pretty)(options "")(descr ""))
+)
