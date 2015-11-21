@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:rpirfid-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -604,7 +605,7 @@ Text Label 10100 5750 0    60   ~ 0
 Text Notes 9100 5900 0    60   ~ 0
 3V REG
 $Comp
-L SD_Card_Revised IC2
+L SD_Card_Revised-RESCUE-rpirfid IC2
 U 1 1 564FAFEB
 P 4600 6400
 F 0 "IC2" H 4550 6700 60  0000 C CNN
@@ -836,7 +837,7 @@ $EndComp
 Wire Wire Line
 	3900 7450 4400 7450
 Text Label 600  7050 0    60   ~ 0
-CLK
+SPI_CLK
 $Comp
 L GND #PWR?
 U 1 1 56502437
@@ -854,8 +855,8 @@ Wire Wire Line
 	5600 6800 5600 6600
 Wire Wire Line
 	5600 6600 5200 6600
-Text Label 5550 6900 0    60   ~ 0
-CD
+Text Label 5600 6800 0    60   ~ 0
+CardDetect
 $Comp
 L GND #PWR?
 U 1 1 56502722
@@ -881,7 +882,7 @@ F 3 "" H 1800 7500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R 1K
+L R 1K~
 U 1 1 56506416
 P 3150 6150
 F 0 "1K " V 3230 6150 50  0000 C CNN
@@ -892,7 +893,7 @@ F 3 "" H 3150 6150 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED ACT
+L LED ACT~RED
 U 1 1 56506507
 P 2650 6150
 F 0 "ACT RED" H 2650 6250 50  0000 C CNN
@@ -903,13 +904,13 @@ F 3 "" H 2650 6150 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2100 5800 2500 5800
-Text Label 2100 5800 0    60   ~ 0
-CS
+	1850 5800 2500 5800
+Text Label 1850 5800 0    60   ~ 0
+CardSelect
 Text Label 1750 6850 0    60   ~ 0
 3.3V
 Text Label 6050 6000 0    60   ~ 0
-DO
+DataOutput
 Wire Wire Line
 	6050 6300 6050 6000
 Wire Wire Line
@@ -930,10 +931,10 @@ Wire Wire Line
 	3550 5800 3550 6250
 Connection ~ 3550 6150
 Wire Wire Line
-	1350 6150 1250 6150
+	1350 6150 1100 6150
 Wire Wire Line
-	1250 6150 1250 7050
-Connection ~ 1250 7050
+	1100 6150 1100 7050
+Connection ~ 1100 7050
 $Comp
 L 4050 IC1
 U 2 1 564FB161
@@ -957,10 +958,10 @@ Wire Wire Line
 	2800 6400 2800 6500
 Wire Wire Line
 	2800 6500 2650 6500
-Text Label 1500 6500 0    60   ~ 0
-DI
+Text Label 1200 6500 0    60   ~ 0
+DataInput
 Wire Wire Line
-	1500 6500 1750 6500
+	1200 6500 1750 6500
 Wire Wire Line
 	3550 6150 3300 6150
 Wire Wire Line
@@ -984,28 +985,31 @@ Text Label 1150 600  0    60   ~ 0
 GND
 Wire Wire Line
 	1150 600  750  600 
-Text Label 4450 5350 0    60   ~ 0
+Text Label 1250 5300 0    60   ~ 0
 AVR_MISO
-Text Label 4450 5550 0    60   ~ 0
+Text Label 1250 5450 0    60   ~ 0
 AVR_SCLK
-Text Label 5200 5300 0    60   ~ 0
+Text Label 1250 5100 0    60   ~ 0
 AVR_MOSI
-Text Label 5200 5550 0    60   ~ 0
-AVR_RESET
-Text Label 4050 5550 0    60   ~ 0
-CLK
+Text Label 650  5450 0    60   ~ 0
+SPI_CLK
 Wire Wire Line
-	4450 5550 4050 5550
-Text Label 5850 5300 0    60   ~ 0
-DI
+	1250 5450 650  5450
+Text Label 650  5100 0    60   ~ 0
+DataInput
 Wire Wire Line
-	5850 5300 5200 5300
-Text Label 4100 5350 0    60   ~ 0
-DO
+	650  5100 1250 5100
+Text Label 650  5300 0    60   ~ 0
+DataOutput
 Wire Wire Line
-	4100 5350 4450 5350
-Text Label 5900 5550 0    60   ~ 0
-CD
-Wire Wire Line
-	5900 5550 5200 5550
+	650  5300 1250 5300
+Text Label 4950 2700 0    60   ~ 0
+CardSelect
+Text Label 4950 2900 0    60   ~ 0
+CardDetect
+NoConn ~ 5300 7450
+NoConn ~ 3200 7400
+NoConn ~ 5200 6450
+NoConn ~ 3850 6150
+NoConn ~ 5200 6700
 $EndSCHEMATC
