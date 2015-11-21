@@ -973,4 +973,19 @@ Wire Wire Line
 	2300 7400 1800 7400
 Wire Wire Line
 	1800 7400 1800 7500
+$Comp
+L GND #PWR?
+U 1 1 56525B6E
+P 750 600
+F 0 "#PWR?" H 750 350 50  0001 C CNN
+F 1 "GND" H 750 450 50  0000 C CNN
+F 2 "" H 750 600 60  0000 C CNN
+F 3 "" H 750 600 60  0000 C CNN
+	1    750  600 
+	0    1    1    0   
+$EndComp
+Text Label 1150 600  0    60   ~ 0
+GND
+Wire Wire Line
+	1150 600  750  600 
 $EndSCHEMATC
