@@ -211,13 +211,13 @@ $EndComp
 Text Label 4800 850  2    60   ~ 0
 AVR_MISO
 Text Label 4800 950  2    60   ~ 0
-AVR_SCK
+AVR_SCLK
 Text Label 4800 1050 2    60   ~ 0
 AVR_RESET
 Text Label 5300 850  0    60   ~ 0
 VCC
 Text Label 5300 950  0    60   ~ 0
-AVG_MOSI
+AVR_MOSI
 Text Label 5300 1050 0    60   ~ 0
 GND
 Text Label 4950 2300 0    60   ~ 0
@@ -880,8 +880,6 @@ F 3 "" H 1800 7500 60  0000 C CNN
 	1    1800 7500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6650 6450 6450 6450
 $Comp
 L R 1K
 U 1 1 56506416
@@ -916,8 +914,6 @@ Wire Wire Line
 	6050 6300 6050 6000
 Wire Wire Line
 	5200 6300 6050 6300
-Text Label 6650 6450 0    60   ~ 0
-DI
 Wire Wire Line
 	3850 6700 3750 6700
 Wire Wire Line
@@ -988,4 +984,28 @@ Text Label 1150 600  0    60   ~ 0
 GND
 Wire Wire Line
 	1150 600  750  600 
+Text Label 4450 5350 0    60   ~ 0
+AVR_MISO
+Text Label 4450 5550 0    60   ~ 0
+AVR_SCLK
+Text Label 5200 5300 0    60   ~ 0
+AVR_MOSI
+Text Label 5200 5550 0    60   ~ 0
+AVR_RESET
+Text Label 4050 5550 0    60   ~ 0
+CLK
+Wire Wire Line
+	4450 5550 4050 5550
+Text Label 5850 5300 0    60   ~ 0
+DI
+Wire Wire Line
+	5850 5300 5200 5300
+Text Label 4100 5350 0    60   ~ 0
+DO
+Wire Wire Line
+	4100 5350 4450 5350
+Text Label 5900 5550 0    60   ~ 0
+CD
+Wire Wire Line
+	5900 5550 5200 5550
 $EndSCHEMATC
