@@ -1,4 +1,7 @@
 (fp_lib_table
-  (lib (name Custom_Library)(type KiCad)(uri "C:\\Users\\Andrey Choi (Admin)\\Documents\\GitHub\\rpi-rfid-2\\Custom_Library.pretty")(options "")(descr ""))
-  (lib (name ds1308)(type KiCad)(uri "C:\\Users\\Andrey Choi (Admin)\\Documents\\GitHub\\rpi-rfid-2\\ds1308.pretty")(options "")(descr ""))
+  (lib (name tqfp44)(type KiCad)(uri "$(KIPRJMOD)\\tqfp44.pretty")(options "")(descr ""))
+  (lib (name SO16)(type KiCad)(uri "$(KIPRJMOD)\\SO16.pretty")(options "")(descr ""))
+  (lib (name HEX4050)(type KiCad)(uri "$(KIPRJMOD)\\HEX4050.pretty")(options "")(descr ""))
+  (lib (name ds1308)(type KiCad)(uri C:\Users\Courtney\Documents\GitHub\rpi-rfid-2\ds1308.pretty)(options "")(descr ""))
+  (lib (name dip8)(type KiCad)(uri "$(KIPRJMOD)\\dip8.pretty")(options "")(descr ""))
 )

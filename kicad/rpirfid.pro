@@ -1,4 +1,4 @@
-update=11/20/2015 7:35:04 PM
+update=12/4/2015 7:28:10 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,4 @@ LibName30=valves
 LibName31=leglamp
 LibName32=ds1307
 LibName33=em4095
+LibName34=7805
