@@ -1,3 +1,4 @@
 *.bak
+kicad-library
 *.bck
 kicad/rpirfid-cache.lib
