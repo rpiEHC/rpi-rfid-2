@@ -1,4 +1,4 @@
-update=12/4/2015 7:28:10 PM
+update=Fri 11 Dec 2015 11:04:07 AM EST
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../Custom_Library
+LibDir=../Custom_Library;../kicad-library
 [eeschema/libraries]
 LibName1=rpirfid-rescue
 LibName2=power

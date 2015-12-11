@@ -243,17 +243,6 @@ F 3 "" H 6700 1250 60  0000 C CNN
 	1    6700 1250
 	0    1    1    0   
 $EndComp
-$Comp
-L ds1307-RESCUE-rpirfid U2
-U 1 1 563DECB3
-P 7600 1700
-F 0 "U2" H 7650 2350 60  0000 C CNN
-F 1 "ds1307" H 7600 1750 60  0000 C CNN
-F 2 "ds1308:ds1307" H 8050 1800 60  0001 C CNN
-F 3 "" H 8050 1800 60  0000 C CNN
-	1    7600 1700
-	1    0    0    -1  
-$EndComp
 Text Label 8200 1500 0    60   ~ 0
 SDA
 Text Label 8200 1400 0    60   ~ 0
@@ -603,17 +592,6 @@ Text Label 10100 5750 0    60   ~ 0
 3.3V
 Text Notes 9100 5900 0    60   ~ 0
 3V REG
-$Comp
-L SD_Card_Revised-RESCUE-rpirfid IC2
-U 1 1 564FAFEB
-P 4600 6400
-F 0 "IC2" H 4550 6700 60  0000 C CNN
-F 1 "SD_Card_Revised" H 4600 6800 60  0000 C CNN
-F 2 "Custom_Library:SD_Card" H 4700 6400 60  0001 C CNN
-F 3 "" H 4700 6400 60  0000 C CNN
-	1    4600 6400
-	1    0    0    -1  
-$EndComp
 $Comp
 L 4050 IC1
 U 1 1 564FB0B8
@@ -1011,4 +989,26 @@ NoConn ~ 3200 7400
 NoConn ~ 5200 6450
 NoConn ~ 3850 6150
 NoConn ~ 5200 6700
+$Comp
+L ds1307 U6
+U 1 1 566B2499
+P 7600 1700
+F 0 "U6" H 7650 2350 60  0000 C CNN
+F 1 "ds1307" H 7600 1750 60  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 8050 1800 60  0001 C CNN
+F 3 "" H 8050 1800 60  0000 C CNN
+	1    7600 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SD_Card_Revised U2
+U 1 1 566B51B1
+P 4600 6400
+F 0 "U2" H 4550 6700 60  0000 C CNN
+F 1 "SD_Card_Revised" H 4600 6800 60  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 4700 6400 60  0001 C CNN
+F 3 "" H 4700 6400 60  0000 C CNN
+	1    4600 6400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
